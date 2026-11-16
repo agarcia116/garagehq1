@@ -8,6 +8,7 @@ import {
   Wrench,
   FileText,
   Wallet,
+  PackageCheck,
   Smartphone,
   ArrowRight,
   Check,
@@ -140,6 +141,7 @@ const PROBLEMS = [
   { icon: Search, pain: 'Customer history scattered across notebooks and memory.', solution: 'Complete vehicle and customer history, one click away.' },
   { icon: FileText, pain: 'Hand-written invoices that look unprofessional and take forever.', solution: 'Polished estimates and invoices, generated and sent in seconds.' },
   { icon: Wallet, pain: 'No idea where the money goes until tax season.', solution: 'Live expense tracking and financial reports, updated automatically.' },
+  { icon: PackageCheck, pain: 'Parts inventory lives in boxes, memory, or outdated spreadsheets.', solution: 'Track stock levels, part costs, and reorder needs before a job gets held up.' },
 ];
 
 const ADVANTAGES = [
