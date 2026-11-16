@@ -341,57 +341,47 @@ export function LandingPage() {
         </div>
 
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="text-center lg:text-left">
-              <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d8a653]/30 bg-[#d8a653]/10 px-3.5 py-1.5 text-xs font-medium text-[#e1b765]">
-                <span className="relative flex h-2 w-2">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d8a653] opacity-75" />
-                  <span className="relative inline-flex h-2 w-2 rounded-full bg-[#d8a653]" />
-                </span>
-                Built for 2–3 bay independent shops
-              </div>
-              <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
-                RUN YOUR SHOP.<br />
-                <span className="bg-gradient-to-r from-[#d8a653] to-[#e1b765] bg-clip-text text-transparent">
-                  NOT YOUR PAPERWORK.
-                </span>
-              </h1>
-              <p className="mx-auto mt-5 max-w-xl text-lg text-[#dbe4e5] lg:mx-0">
-                The all-in-one management software built for independent auto repair shops.
-              </p>
-              <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-[#b1c0c0] lg:mx-0">
-                Manage appointments, customers, repairs, invoices, and expenses from one simple dashboard. Spend less time on paperwork and more time running your business.
-              </p>
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#d8a653]/30 bg-[#d8a653]/10 px-3.5 py-1.5 text-xs font-medium text-[#e1b765]">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#d8a653] opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-[#d8a653]" />
+              </span>
+              Built for 2–3 bay independent shops
+            </div>
+            <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-5xl lg:text-6xl">
+              RUN YOUR SHOP.<br />
+              <span className="bg-gradient-to-r from-[#d8a653] to-[#e1b765] bg-clip-text text-transparent">
+                NOT YOUR PAPERWORK.
+              </span>
+            </h1>
+            <p className="mx-auto mt-5 max-w-xl text-lg text-[#dbe4e5]">
+              The all-in-one management software built for independent auto repair shops.
+            </p>
+            <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-[#b1c0c0]">
+              Manage appointments, customers, repairs, invoices, and expenses from one simple dashboard. Spend less time on paperwork and more time running your business.
+            </p>
 
-              <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row lg:justify-start">
-                <Link
-                  to="/signup"
-                  className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#d8a653] px-6 py-3.5 text-base font-bold text-[#173746] shadow-lg shadow-black/30 transition-all hover:bg-[#e1b765] sm:w-auto"
-                >
-                  Get Started — $159.99/Month
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
-                </Link>
-                <button
-                  onClick={() => scrollTo('#demo')}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#d8a653]/30 bg-white/5 px-6 py-3.5 text-base font-semibold text-white transition-all hover:border-[#d8a653]/50 hover:bg-white/10 sm:w-auto"
-                >
-                  Explore Live Demo
-                </button>
-              </div>
-
-              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-[#b1c0c0] lg:justify-start">
-                <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-[#d8a653]" /> No setup fees</span>
-                <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-[#d8a653]" /> Cancel anytime</span>
-                <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-[#d8a653]" /> Free trial</span>
-              </div>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+              <Link
+                to="/signup"
+                className="group inline-flex w-full items-center justify-center gap-2 rounded-xl bg-[#d8a653] px-6 py-3.5 text-base font-bold text-[#173746] shadow-lg shadow-black/30 transition-all hover:bg-[#e1b765] sm:w-auto"
+              >
+                Get Started — $159.99/Month
+                <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+              </Link>
+              <button
+                onClick={() => scrollTo('#demo')}
+                className="inline-flex w-full items-center justify-center gap-2 rounded-xl border border-[#d8a653]/30 bg-white/5 px-6 py-3.5 text-base font-semibold text-white transition-all hover:border-[#d8a653]/50 hover:bg-white/10 sm:w-auto"
+              >
+                Explore Live Demo
+              </button>
             </div>
 
-            <div className="relative">
-              <div className="absolute -inset-4 -z-10 rounded-3xl bg-gradient-to-br from-[#d8a653]/15 to-[#234b5a]/20 blur-2xl" />
-              <DashboardDemo />
-              <div className="mt-4 flex items-center justify-center gap-2 text-xs text-[#b1c0c0]">
-                <Smartphone className="h-4 w-4" /> Fully responsive — try the tabs above to explore the live interface
-              </div>
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-[#b1c0c0]">
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-[#d8a653]" /> No setup fees</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-[#d8a653]" /> Cancel anytime</span>
+              <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="h-4 w-4 text-[#d8a653]" /> Free trial</span>
             </div>
           </div>
         </div>
