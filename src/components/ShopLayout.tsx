@@ -115,7 +115,7 @@ export function ShopLayout({ children }: { children: ReactNode }) {
       )}
 
       <aside
-        className={`fixed inset-y-0 left-0 z-40 w-64 transform border-r border-[#284d5b] bg-[#173746] transition-transform duration-200 lg:static lg:translate-x-0 ${
+        className={`fixed inset-y-0 left-0 z-40 w-64 transform border-r border-[#2a5d8a] bg-[#1a3a5c] transition-transform duration-200 lg:static lg:translate-x-0 ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
@@ -131,7 +131,7 @@ export function ShopLayout({ children }: { children: ReactNode }) {
               onClick={() => setSidebarOpen(false)}
               className={({ isActive }) =>
                 `flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
-                  isActive ? 'bg-[#d8a653] text-[#173746]' : 'text-[#dbe4e5] hover:bg-white/10 hover:text-white'
+                  isActive ? 'bg-[#d8a653] text-[#1a3a5c]' : 'text-[#dbe8f0] hover:bg-white/10 hover:text-white'
                 }`
               }
             >
@@ -143,7 +143,7 @@ export function ShopLayout({ children }: { children: ReactNode }) {
 
         <div className="border-t border-white/10 p-4">
           <div className="mb-3 flex items-center gap-3">
-            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#d8a653] text-sm font-bold text-[#173746]">
+            <div className="flex h-9 w-9 items-center justify-center rounded-full bg-[#d8a653] text-sm font-bold text-[#1a3a5c]">
               {member?.full_name?.charAt(0).toUpperCase() ?? '?'}
             </div>
             <div className="min-w-0 flex-1">
@@ -153,7 +153,7 @@ export function ShopLayout({ children }: { children: ReactNode }) {
           </div>
           <button
             onClick={signOut}
-            className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm text-[#dbe4e5] hover:bg-white/10 hover:text-white transition-colors"
+            className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-sm text-[#dbe8f0] hover:bg-white/10 hover:text-white transition-colors"
           >
             <LogOut className="h-4 w-4" />
             Sign Out
@@ -176,14 +176,14 @@ export function ShopLayout({ children }: { children: ReactNode }) {
           </div>
           <div className="flex items-center gap-4">
             <div className="hidden items-center gap-2 sm:flex">
-              <span className="text-sm font-medium text-[#49636b]">{shop?.name}</span>
+              <span className="text-sm font-medium text-[#4a6d8a]">{shop?.name}</span>
             </div>
 
             {/* Notifications dropdown */}
             <div className="relative" ref={notifRef}>
               <button
                 onClick={() => setNotifOpen(!notifOpen)}
-                className="relative rounded-lg p-2 text-[#49636b] hover:bg-[#f5f1e8] transition-colors"
+                className="relative rounded-lg p-2 text-[#4a6d8a] hover:bg-[#f0f5fa] transition-colors"
               >
                 <Bell className="h-5 w-5" />
                 {unreadCount > 0 && (

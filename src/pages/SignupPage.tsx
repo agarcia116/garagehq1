@@ -81,7 +81,7 @@ export function SignupPage() {
 
   if (step === 'success') {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#173746] px-4">
+      <div className="flex min-h-screen items-center justify-center bg-[#1a3a5c] px-4">
         <div className="w-full max-w-md rounded-xl bg-white p-8 text-center shadow-xl">
           <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-green-100">
             <CheckCircle2 className="h-8 w-8 text-green-600" />
@@ -92,7 +92,7 @@ export function SignupPage() {
           </p>
           <button
             onClick={() => navigate('/login')}
-            className="w-full rounded-lg bg-[#d8a653] px-4 py-2.5 text-sm font-semibold text-[#173746] hover:bg-[#e1b765] transition-colors"
+            className="w-full rounded-lg bg-[#d8a653] px-4 py-2.5 text-sm font-semibold text-[#1a3a5c] hover:bg-[#e1b765] transition-colors"
           >
             Continue to Sign In
           </button>
@@ -102,12 +102,12 @@ export function SignupPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#173746] px-4 py-8">
+    <div className="flex min-h-screen items-center justify-center bg-[#1a3a5c] px-4 py-8">
       <div className="w-full max-w-lg">
         <div className="mb-6 flex flex-col items-center">
           <img src="/images/GarageHQ_Logo.jpg" alt="GarageHQ Shop Management" className="mb-3 h-auto w-64 rounded-lg" />
           <h1 className="text-xl font-bold text-white">Register Your Shop</h1>
-          <p className="text-sm text-[#dbe4e5]">Get started with GarageHQ — $159.99/month after trial</p>
+          <p className="text-sm text-[#dbe8f0]">Get started with GarageHQ — $159.99/month after trial</p>
         </div>
 
         <div className="rounded-xl bg-white p-8 shadow-xl">
@@ -129,7 +129,7 @@ export function SignupPage() {
                     value={shopName}
                     onChange={(e) => setShopName(e.target.value)}
                     required
-                    className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                    className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                     placeholder="Joe's Auto Repair"
                   />
                 </div>
@@ -139,7 +139,7 @@ export function SignupPage() {
                     type="tel"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                    className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                     placeholder="(555) 123-4567"
                   />
                 </div>
@@ -149,7 +149,7 @@ export function SignupPage() {
                     type="text"
                     value={address}
                     onChange={(e) => setAddress(e.target.value)}
-                    className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                    className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                     placeholder="123 Main Street"
                   />
                 </div>
@@ -159,7 +159,7 @@ export function SignupPage() {
                     type="text"
                     value={city}
                     onChange={(e) => setCity(e.target.value)}
-                    className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                    className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                     placeholder="Springfield"
                   />
                 </div>
@@ -171,7 +171,7 @@ export function SignupPage() {
                       value={state}
                       onChange={(e) => setState(e.target.value)}
                       maxLength={2}
-                      className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                      className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                       placeholder="IL"
                     />
                   </div>
@@ -181,7 +181,7 @@ export function SignupPage() {
                       type="text"
                       value={zipCode}
                       onChange={(e) => setZipCode(e.target.value)}
-                      className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                      className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                       placeholder="62701"
                     />
                   </div>
@@ -199,7 +199,7 @@ export function SignupPage() {
                     value={ownerName}
                     onChange={(e) => setOwnerName(e.target.value)}
                     required
-                    className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                    className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                     placeholder="Joe Smith"
                   />
                 </div>
@@ -210,7 +210,7 @@ export function SignupPage() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                    className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                     placeholder="joe@joesautorepair.com"
                   />
                 </div>
@@ -222,7 +222,7 @@ export function SignupPage() {
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     minLength={6}
-                    className="w-full rounded-lg border border-[#c9d4d2] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
+                    className="w-full rounded-lg border border-[#c5d4e8] px-3 py-2 text-gray-900 focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none transition-colors"
                     placeholder="At least 6 characters"
                   />
                 </div>
@@ -232,7 +232,7 @@ export function SignupPage() {
             <button
               type="submit"
               disabled={loading}
-              className="w-full rounded-lg bg-[#d8a653] px-4 py-2.5 text-sm font-semibold text-[#173746] hover:bg-[#e1b765] disabled:opacity-50 transition-colors"
+              className="w-full rounded-lg bg-[#d8a653] px-4 py-2.5 text-sm font-semibold text-[#1a3a5c] hover:bg-[#e1b765] disabled:opacity-50 transition-colors"
             >
               {loading ? 'Creating your account...' : 'Register Shop — Start Free Trial'}
             </button>
