@@ -17,6 +17,7 @@ import { EmployeesPage } from '@/pages/EmployeesPage';
 import { SettingsPage } from '@/pages/SettingsPage';
 import { CustomerPortalPage } from '@/pages/CustomerPortalPage';
 import { RepairGuidesPage } from '@/pages/RepairGuidesPage';
+import { LandingPage } from '@/components/landing/LandingPage';
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const { session, loading } = useAuth();
@@ -67,6 +68,7 @@ export default function App() {
     <AuthProvider>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/signup" element={<SignupPage />} />
           <Route path="/portal" element={<CustomerPortalPage />} />
