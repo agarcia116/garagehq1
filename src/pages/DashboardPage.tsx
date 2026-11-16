@@ -53,11 +53,12 @@ export function DashboardPage() {
     monthStart.setDate(1);
     const monthStartStr = monthStart.toISOString().split('T')[0];
 
-    const [appts, repairs, estimates, invoices, expenses, custs, vehs] = await Promise.all([
+    const [appts, repairs, estimates, invoices, paidInvoices, expenses, custs, vehs] = await Promise.all([
       supabase.from('appointments').select('*').eq('shop_id', shop.id).eq('appointment_date', today),
       supabase.from('repair_orders').select('*').eq('shop_id', shop.id).not('status', 'in', '("completed","ready for pickup")'),
       supabase.from('estimates').select('*').eq('shop_id', shop.id).eq('status', 'sent'),
       supabase.from('invoices').select('*').eq('shop_id', shop.id).in('status', ['unpaid', 'partially paid', 'overdue']),
+      supabase.from('invoices').select('*').eq('shop_id', shop.id).eq('status', 'paid').gte('paid_at', monthStart.toISOString()),
       supabase.from('expenses').select('*').eq('shop_id', shop.id).gte('expense_date', monthStartStr),
       supabase.from('customers').select('*').eq('shop_id', shop.id),
       supabase.from('vehicles').select('*').eq('shop_id', shop.id),
@@ -71,9 +72,8 @@ export function DashboardPage() {
     (vehs.data as Vehicle[] | null)?.forEach((v) => { vehMap[v.id] = v; });
     setVehicles(vehMap);
 
-    const monthlyRevenue = (invoices.data as Invoice[] | null)
-      ?.filter((inv) => inv.status === 'paid')
-      .reduce((sum, inv) => sum + inv.amount_paid, 0) ?? 0;
+    const monthlyRevenue = (paidInvoices.data as Invoice[] | null)
+      ?.reduce((sum, inv) => sum + inv.amount_paid, 0) ?? 0;
 
     const monthlyExpenses = (expenses.data as Expense[] | null)
       ?.reduce((sum, exp) => sum + exp.amount, 0) ?? 0;
