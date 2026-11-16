@@ -72,10 +72,10 @@ export function CustomerPortalPage() {
 
   if (!linked) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#1a2234] px-4">
+      <div className="flex min-h-screen items-center justify-center bg-[#173746] px-4">
         <div className="w-full max-w-md">
           <div className="mb-6 flex flex-col items-center">
-            <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-blue-500">
+            <div className="mb-3 flex h-12 w-12 items-center justify-center rounded-xl bg-[#d8a653]">
               <Wrench className="h-7 w-7 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-white">Garage HQ</h1>
@@ -93,21 +93,21 @@ export function CustomerPortalPage() {
               <div>
                 <label className="mb-1 block text-sm font-medium text-gray-700">Email</label>
                 <input type="email" value={searchEmail} onChange={(e) => { setSearchEmail(e.target.value); setSearchPhone(''); }}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none" placeholder="you@email.com" />
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none" placeholder="you@email.com" />
               </div>
               <div className="text-center text-xs text-gray-400">— or —</div>
               <div>
                 <label className="mb-1 block text-sm font-medium text-gray-700">Phone</label>
                 <input type="tel" value={searchPhone} onChange={(e) => { setSearchPhone(e.target.value); setSearchEmail(''); }}
-                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none" placeholder="(555) 123-4567" />
+                  className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-[#d8a653] focus:ring-2 focus:ring-[#d8a653]/30 outline-none" placeholder="(555) 123-4567" />
               </div>
-              <button type="submit" className="w-full rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors">
+              <button type="submit" className="w-full rounded-lg bg-[#d8a653] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#e1b765] transition-colors">
                 Access My Account
               </button>
             </form>
             <p className="mt-6 text-center text-sm text-gray-600">
               Are you a shop owner?{' '}
-              <Link to="/login" className="font-semibold text-blue-600 hover:text-blue-700">Sign in here</Link>
+              <Link to="/login" className="font-semibold text-[#a87524] hover:text-[#7e571b]">Sign in here</Link>
             </p>
           </div>
         </div>
@@ -140,14 +140,14 @@ export function CustomerPortalPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <header className="bg-[#1a2234] text-white">
+      <header className="bg-[#173746] text-white">
         <div className="mx-auto max-w-4xl px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-blue-500"><Wrench className="h-5 w-5" /></div>
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#d8a653]"><Wrench className="h-5 w-5" /></div>
               <div>
                 <p className="text-sm font-bold">Garage HQ</p>
-                <p className="text-xs text-blue-400">{shop?.name}</p>
+                <p className="text-xs text-[#d8a653]">{shop?.name}</p>
               </div>
             </div>
             <button onClick={() => { setLinked(false); setCustomer(null); setShop(null); }}
@@ -163,7 +163,7 @@ export function CustomerPortalPage() {
             {navItems.map((item) => (
               <button key={item.key} onClick={() => setView(item.key)}
                 className={`flex items-center gap-1.5 whitespace-nowrap border-b-2 px-3 py-3 text-sm font-medium transition-colors ${
-                  view === item.key ? 'border-blue-600 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'
+                  view === item.key ? 'border-[#d8a653] text-[#a87524]' : 'border-transparent text-gray-500 hover:text-gray-700'
                 }`}>
                 {item.icon}{item.label}
               </button>
@@ -175,7 +175,7 @@ export function CustomerPortalPage() {
       <main className="mx-auto max-w-4xl px-4 py-6">
         {view === 'home' && (
           <div className="space-y-4">
-            <div className="rounded-xl bg-blue-600 p-6 text-white">
+            <div className="rounded-xl bg-[#d8a653] p-6 text-white">
               <h2 className="text-xl font-bold">Welcome, {customer?.first_name}!</h2>
               <p className="mt-1 text-sm text-blue-100">Here's what's happening with your vehicles at {shop?.name}.</p>
             </div>
@@ -373,7 +373,7 @@ export function CustomerPortalPage() {
 
 function HomeCard({ label, value, icon, color, onClick }: { label: string; value: number; icon: React.ReactNode; color: string; onClick: () => void }) {
   const colorMap: Record<string, string> = {
-    blue: 'bg-blue-50 text-blue-600',
+    blue: 'bg-[#f3e3bf] text-blue-600',
     orange: 'bg-orange-50 text-orange-600',
     indigo: 'bg-indigo-50 text-indigo-600',
     red: 'bg-red-50 text-red-600',

@@ -47,7 +47,7 @@ const GUIDE_CATEGORIES: GuideCategory[] = [
     id: 'engine',
     label: 'Engine & Drivetrain',
     icon: <Cog className="h-5 w-5" />,
-    color: 'bg-blue-50 text-blue-600',
+    color: 'bg-[#f3e3bf] text-[#a87524]',
     procedures: [
       {
         title: 'Oil & Filter Change',
@@ -202,7 +202,7 @@ const GUIDE_CATEGORIES: GuideCategory[] = [
     id: 'electrical',
     label: 'Electrical & Battery',
     icon: <Battery className="h-5 w-5" />,
-    color: 'bg-yellow-50 text-yellow-600',
+    color: 'bg-[#f3e3bf] text-[#a87524]',
     procedures: [
       {
         title: 'Battery Testing & Replacement',
@@ -454,17 +454,17 @@ export function RepairGuidesPage() {
   return (
     <div className="space-y-4 p-4 lg:p-6">
       {/* Header with ALLDATA branding context */}
-      <div className="rounded-xl bg-gradient-to-r from-[#1a2234] to-[#2a3650] p-5 text-white">
+      <div className="rounded-xl bg-gradient-to-r from-[#173746] to-[#234b5a] p-5 text-white">
         <div className="flex items-start justify-between">
           <div>
             <div className="flex items-center gap-2">
-              <BookOpen className="h-6 w-6 text-blue-400" />
+              <BookOpen className="h-6 w-6 text-[#d8a653]" />
               <h2 className="text-xl font-bold">Repair Guides</h2>
             </div>
             <p className="mt-1 text-sm text-gray-300">OEM repair procedures, torque specs, and diagnostic guides for your shop</p>
           </div>
           <div className="rounded-lg bg-white/10 px-3 py-1.5 text-xs">
-            Powered by ALLDATA<span className="text-blue-400"> Connect</span>
+            Powered by ALLDATA<span className="text-[#d8a653]"> Connect</span>
           </div>
         </div>
         <div className="mt-3 flex items-center gap-2 rounded-lg bg-yellow-400/15 px-3 py-2 text-xs text-yellow-200">
@@ -504,7 +504,7 @@ export function RepairGuidesPage() {
                 <p className="text-xs text-gray-400">Or pick from shop vehicles:</p>
                 {vehicles.slice(0, 5).map((v) => (
                   <button key={v.id} onClick={() => { setFilterMake(v.make); setFilterYear(v.year ? String(v.year) : ''); }}
-                    className="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-xs text-gray-600 hover:bg-blue-50 transition-colors">
+                    className="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-xs text-gray-600 hover:bg-[#f3e3bf] transition-colors">
                     <Car className="h-3 w-3 text-gray-400" />
                     {vehicleLabel(v)}
                   </button>
@@ -520,7 +520,7 @@ export function RepairGuidesPage() {
               {GUIDE_CATEGORIES.map((cat) => (
                 <button key={cat.id} onClick={() => { setSelectedCategory(cat.id); setSelectedProcedure(null); }}
                   className={`flex w-full items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
-                    selectedCategory === cat.id ? 'bg-blue-50 text-blue-700' : 'text-gray-600 hover:bg-gray-50'
+                    selectedCategory === cat.id ? 'bg-[#f3e3bf] text-[#8d641f]' : 'text-gray-600 hover:bg-gray-50'
                   }`}>
                   <span className={`flex h-8 w-8 items-center justify-center rounded-lg ${cat.color}`}>{cat.icon}</span>
                   <span className="flex-1 text-left">{cat.label}</span>
@@ -551,10 +551,10 @@ export function RepairGuidesPage() {
               </div>
 
               {filterMake && (
-                <div className="flex items-center gap-2 rounded-lg bg-blue-50 px-3 py-2 text-sm text-blue-700">
+                <div className="flex items-center gap-2 rounded-lg bg-[#f3e3bf] px-3 py-2 text-sm text-[#8d641f]">
                   <Car className="h-4 w-4" />
                   Showing guides for: {filterYear} {filterMake}
-                  <button onClick={() => { setFilterMake(''); setFilterYear(''); }} className="ml-auto text-xs text-blue-600 hover:underline">Clear</button>
+                  <button onClick={() => { setFilterMake(''); setFilterYear(''); }} className="ml-auto text-xs text-[#a87524] hover:underline">Clear</button>
                 </div>
               )}
 
@@ -565,9 +565,9 @@ export function RepairGuidesPage() {
               ) : (
                 filteredProcedures.map((proc, i) => (
                   <button key={i} onClick={() => setSelectedProcedure(proc)}
-                    className="flex w-full items-center justify-between rounded-xl border border-gray-200 bg-white p-4 text-left hover:border-blue-300 hover:shadow-sm transition-all">
+                    className="flex w-full items-center justify-between rounded-xl border border-gray-200 bg-white p-4 text-left hover:border-[#d8a653] hover:shadow-sm transition-all">
                     <div className="flex items-center gap-3">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-50 text-blue-600">
+                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#f3e3bf] text-[#a87524]">
                         <Wrench className="h-5 w-5" />
                       </div>
                       <div>
@@ -590,7 +590,7 @@ export function RepairGuidesPage() {
               <div className="mb-4 flex items-start justify-between">
                 <div>
                   <button onClick={() => setSelectedProcedure(null)}
-                    className="mb-2 flex items-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-700">
+                    className="mb-2 flex items-center gap-1 text-xs font-medium text-[#a87524] hover:text-[#8d641f]">
                     <ChevronRight className="h-3 w-3 rotate-180" /> Back to list
                   </button>
                   <h2 className="text-xl font-bold text-gray-900">{selectedProcedure.title}</h2>
@@ -606,7 +606,7 @@ export function RepairGuidesPage() {
               </div>
 
               {filterMake && (
-                <div className="mb-4 flex items-center gap-2 rounded-lg bg-blue-50 px-3 py-2 text-sm text-blue-700">
+                <div className="mb-4 flex items-center gap-2 rounded-lg bg-[#f3e3bf] px-3 py-2 text-sm text-[#8d641f]">
                   <Car className="h-4 w-4" /> Applied to: {filterYear} {filterMake}
                 </div>
               )}
@@ -648,7 +648,7 @@ export function RepairGuidesPage() {
                 <div className="space-y-3">
                   {selectedProcedure.steps.map((step, i) => (
                     <div key={i} className="flex gap-3">
-                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-700">
+                      <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#f3e3bf] text-xs font-bold text-[#8d641f]">
                         {i + 1}
                       </div>
                       <p className="pt-0.5 text-sm text-gray-700">{step}</p>
@@ -658,8 +658,8 @@ export function RepairGuidesPage() {
               </div>
 
               {/* Safety notice */}
-              <div className="mt-6 flex items-start gap-2 rounded-lg bg-yellow-50 p-3 text-xs text-yellow-800">
-                <CircleAlert className="h-4 w-4 shrink-0 text-yellow-600" />
+              <div className="mt-6 flex items-start gap-2 rounded-lg bg-[#f3e3bf] p-3 text-xs text-[#8d641f]">
+                <CircleAlert className="h-4 w-4 shrink-0 text-[#a87524]" />
                 <span>Always consult the vehicle's specific OEM service manual for exact torque values, procedures, and safety requirements. These guides are for general reference. Torque specs may vary by engine and model year.</span>
               </div>
             </div>

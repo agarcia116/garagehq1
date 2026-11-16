@@ -388,7 +388,7 @@ export function LandingPage() {
       </section>
 
       {/* Problems & Solutions */}
-      <section className="border-t border-[#d8a653]/10 bg-[#14302d] py-20 lg:py-28">
+      <section className="border-t border-[#d8a653]/10 bg-[#173746] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="reveal mx-auto mb-14 max-w-2xl text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-[#d8a653]">The Problem</span>
@@ -463,7 +463,7 @@ export function LandingPage() {
       </section>
 
       {/* Interactive Demo */}
-      <section className="border-t border-[#d8a653]/10 bg-[#14302d] py-20 lg:py-28">
+      <section className="border-t border-[#d8a653]/10 bg-[#173746] py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="reveal mx-auto mb-12 max-w-2xl text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-[#d8a653]">Live Demo</span>
@@ -511,7 +511,7 @@ export function LandingPage() {
               </div>
             </div>
 
-            <div className="reveal rounded-2xl border border-[#d8a653]/20 bg-[#14302d] p-6 shadow-2xl shadow-black/30">
+            <div className="reveal rounded-2xl border border-[#d8a653]/20 bg-[#173746] p-6 shadow-2xl shadow-black/30">
               <div className="mb-4 grid grid-cols-[1fr_auto_auto] gap-x-3 gap-y-1 text-xs">
                 <span></span>
                 <span className="px-2 text-center font-bold text-[#667b80]">Paper / Spreadsheets</span>
@@ -544,7 +544,7 @@ export function LandingPage() {
       </section>
 
       {/* Reviews */}
-      <section id="reviews" className="border-t border-[#d8a653]/10 bg-[#14302d] py-20 lg:py-28 scroll-mt-20">
+      <section id="reviews" className="border-t border-[#d8a653]/10 bg-[#173746] py-20 lg:py-28 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="reveal mx-auto mb-12 max-w-2xl text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-[#d8a653]">Reviews</span>
@@ -641,7 +641,7 @@ export function LandingPage() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="border-t border-[#d8a653]/10 bg-[#14302d] py-20 lg:py-28 scroll-mt-20">
+      <section id="pricing" className="border-t border-[#d8a653]/10 bg-[#173746] py-20 lg:py-28 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="reveal mx-auto mb-14 max-w-2xl text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-[#d8a653]">Pricing</span>
@@ -736,7 +736,7 @@ export function LandingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="relative overflow-hidden border-t border-[#d8a653]/10 bg-gradient-to-br from-[#234b5a] via-[#173746] to-[#14302d] py-20 lg:py-28">
+      <section className="relative overflow-hidden border-t border-[#d8a653]/10 bg-gradient-to-br from-[#234b5a] via-[#173746] to-[#173746] py-20 lg:py-28">
         <div className="absolute inset-0 -z-10">
           <div className="absolute left-1/2 top-1/2 h-[400px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#d8a653]/15 blur-[120px]" />
         </div>
@@ -769,7 +769,7 @@ export function LandingPage() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="border-t border-[#d8a653]/10 bg-[#14302d] py-20 lg:py-24 scroll-mt-20">
+      <section id="contact" className="border-t border-[#d8a653]/10 bg-[#173746] py-20 lg:py-24 scroll-mt-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">
             <div className="reveal">

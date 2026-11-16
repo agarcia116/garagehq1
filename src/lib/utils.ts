@@ -56,15 +56,15 @@ export function generateInvoiceNumber(): string {
 
 export function statusColors(status: string): string {
   const map: Record<string, string> = {
-    pending: 'bg-[#e6eef5] text-[#4a6d8a]',
-    diagnosing: 'bg-[#dbe7ea] text-[#2a5d8a]',
+    pending: 'bg-[#e6eef5] text-[#49636b]',
+    diagnosing: 'bg-[#dbe7ea] text-[#234b5a]',
     'awaiting approval': 'bg-[#f3e3bf] text-[#8d641f]',
-    'in progress': 'bg-[#dbe7ea] text-[#2a5d8a]',
+    'in progress': 'bg-[#dbe7ea] text-[#234b5a]',
     'waiting for parts': 'bg-[#f3e3bf] text-[#8d641f]',
     completed: 'bg-[#e0ece4] text-[#35634b]',
     'ready for pickup': 'bg-[#e0ece4] text-[#35634b]',
-    draft: 'bg-[#e6eef5] text-[#4a6d8a]',
-    sent: 'bg-[#dbe7ea] text-[#2a5d8a]',
+    draft: 'bg-[#e6eef5] text-[#49636b]',
+    sent: 'bg-[#dbe7ea] text-[#234b5a]',
     approved: 'bg-[#e0ece4] text-[#35634b]',
     declined: 'bg-[#f4e1d9] text-[#9a4f38]',
     unpaid: 'bg-[#f3e3bf] text-[#8d641f]',
@@ -74,7 +74,7 @@ export function statusColors(status: string): string {
     requested: 'bg-[#f3e3bf] text-[#8d641f]',
     confirmed: 'bg-[#e0ece4] text-[#35634b]',
     cancelled: 'bg-[#f4e1d9] text-[#9a4f38]',
-    completed_apt: 'bg-[#e6eef5] text-[#4a6d8a]',
+    completed_apt: 'bg-[#e6eef5] text-[#49636b]',
   };
   return map[status.toLowerCase()] || 'bg-gray-100 text-gray-700';
 }
